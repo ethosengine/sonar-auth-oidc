@@ -9,8 +9,8 @@ spec:
   nodeSelector:
     node-type: edge
   containers:
-  - name: maven-jdk8
-    image: maven:3.9.9-eclipse-temurin-8-alpine
+  - name: maven-jdk17
+    image: maven:3.9.9-eclipse-temurin-17-alpine
     command:
     - cat
     tty: true
@@ -40,10 +40,10 @@ spec:
         stage ('Chekout and Compile') {
                 
             steps {
-             	container('maven-jdk8'){
+             	container('maven-jdk17'){
         	       script {
-                        checkout scm
-              
+                        checkout scm 
+                        
                         withMaven() {
                             sh 'mvn clean compile -fae'
                         }
@@ -54,7 +54,7 @@ spec:
         
         stage ('Unit Test') {
             steps {
-                container('maven-jdk8'){
+                container('maven-jdk17'){
                     script {
                         withMaven() {
                             sh 'mvn test -fae'
@@ -66,7 +66,7 @@ spec:
         
         stage ('Integration Test') {
             steps {
-                container('maven-jdk8'){
+                container('maven-jdk17'){
                     script {
                         withMaven() {
                             sh 'mvn integration-test -fae'
@@ -91,7 +91,7 @@ spec:
     
     post {
         always {
-            container('maven-jdk8') {
+            container('maven-jdk17') {
                 junit(
                     allowEmptyResults: true,
                     testResults: '**/test-reports/*.xml'
