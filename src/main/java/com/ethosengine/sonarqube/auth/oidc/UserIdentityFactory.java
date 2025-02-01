@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaulttec.sonarqube.auth.oidc;
+package com.ethosengine.sonarqube.auth.oidc;
 
 import com.nimbusds.openid.connect.sdk.claims.UserInfo;
 import org.sonar.api.server.ServerSide;
@@ -25,8 +25,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static com.ethosengine.sonarqube.auth.oidc.OidcConfiguration.*;
 import static java.lang.String.format;
-import static org.vaulttec.sonarqube.auth.oidc.OidcConfiguration.*;
 
 /**
  * Converts OpenID Connect {@link UserInfo} to SonarQube {@link UserIdentity}.

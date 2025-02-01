@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaulttec.sonarqube.auth.oidc;
+package com.ethosengine.sonarqube.auth.oidc;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertThrows;
@@ -27,6 +27,10 @@ import static org.mockito.Mockito.when;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+import com.ethosengine.sonarqube.auth.oidc.OidcClient;
+import com.ethosengine.sonarqube.auth.oidc.OidcConfiguration;
+import com.ethosengine.sonarqube.auth.oidc.OidcIdentityProvider;
+import com.ethosengine.sonarqube.auth.oidc.UserIdentityFactory;
 import com.nimbusds.openid.connect.sdk.AuthenticationRequest;
 
 import org.junit.Test;

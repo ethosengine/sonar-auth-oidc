@@ -8,3 +8,7 @@ out
 /.settings
 /.vscode
 *.iml
+
+target/
+**/target/
+*.class

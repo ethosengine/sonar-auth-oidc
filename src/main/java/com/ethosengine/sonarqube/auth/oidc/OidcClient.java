@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaulttec.sonarqube.auth.oidc;
+package com.ethosengine.sonarqube.auth.oidc;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

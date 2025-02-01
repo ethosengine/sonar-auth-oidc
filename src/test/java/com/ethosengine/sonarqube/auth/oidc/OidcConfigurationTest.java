@@ -15,17 +15,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaulttec.sonarqube.auth.oidc;
+package com.ethosengine.sonarqube.auth.oidc;
 
+import static com.ethosengine.sonarqube.auth.oidc.OidcConfiguration.ID_TOKEN_SIG_ALG_RSA;
+import static com.ethosengine.sonarqube.auth.oidc.OidcConfiguration.LOGIN_STRATEGY_PREFERRED_USERNAME;
+import static com.ethosengine.sonarqube.auth.oidc.OidcConfiguration.LOGIN_STRATEGY_PROVIDER_ID;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.vaulttec.sonarqube.auth.oidc.OidcConfiguration.ID_TOKEN_SIG_ALG_RSA;
-import static org.vaulttec.sonarqube.auth.oidc.OidcConfiguration.LOGIN_STRATEGY_PREFERRED_USERNAME;
-import static org.vaulttec.sonarqube.auth.oidc.OidcConfiguration.LOGIN_STRATEGY_PROVIDER_ID;
 
 import org.junit.Test;
 import org.sonar.api.CoreProperties;
 import org.sonar.api.config.PropertyDefinitions;
 import org.sonar.api.config.internal.MapSettings;
+
+import com.ethosengine.sonarqube.auth.oidc.OidcConfiguration;
 
 public class OidcConfigurationTest {
 

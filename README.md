@@ -1,5 +1,16 @@
 # OpenID Connect (OIDC) Plugin for SonarQube
-[![Build Status](https://github.com/vaulttec/sonar-auth-oidc/actions/workflows/build.yml/badge.svg)](https://github.com/vaulttec/sonar-auth-oidc/actions/workflows/build.yml) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=org.vaulttec.sonarqube.auth.oidc%3Asonar-auth-oidc-plugin&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.vaulttec.sonarqube.auth.oidc%3Asonar-auth-oidc-plugin) [![Release](https://img.shields.io/github/release/vaulttec/sonar-auth-oidc.svg)](https://github.com/vaulttec/sonar-auth-oidc/releases/latest) [![Marketplace](https://img.shields.io/badge/Marketplace-authoidc-orange?logo=SonarQube)](https://www.sonarplugins.com/authoidc)
+[![Build Status](https://github.com/vaulttec/sonar-auth-oidc/actions/workflows/build.yml/badge.svg)](https://github.com/vaulttec/sonar-auth-oidc/actions/workflows/build.yml) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.ethosengine.sonarqube.auth.oidc%3Asonar-auth-oidc-plugin&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.ethosengine.sonarqube.auth.oidc%3Asonar-auth-oidc-plugin) [![Release](https://img.shields.io/github/release/vaulttec/sonar-auth-oidc.svg)](https://github.com/vaulttec/sonar-auth-oidc/releases/latest) [![Marketplace](https://img.shields.io/badge/Marketplace-authoidc-orange?logo=SonarQube)](https://www.sonarplugins.com/authoidc)
+
+
+> **Fork Status Notice**  
+> This repository is a maintained fork of [vaulttec/sonar-auth-oidc](https://github.com/vaulttec/sonar-auth-oidc). The original project appears to be unmaintained since its last update in 2023. This fork aims to provide continued maintenance, security updates, and compatibility with newer SonarQube versions.
+>
+> Changes from the original project include:
+> - Ongoing maintenance and security updates
+> - Compatibility with newer SonarQube versions
+> - Active issue response and community support
+> 
+> We appreciate the original work by Torsten Juergeleit and Vaulttec, which provided the foundation for this continued development.
 
 ## Description
 
@@ -69,7 +80,7 @@ If a [network proxy](https://docs.oracle.com/javase/8/docs/api/java/net/doc-file
 To troubleshoot issues with this plugin activate [SonarQube's debug logging](https://docs.sonarqube.org/latest/instance-administration/system-info/) (Administration > System > Logs level) and download the Web Server log:
 ![SonarQube System Logs](docs/images/sonarqube-system-logs.png)
 
-In the Web Server log file the plugin's log entries can be identified by the package name of it's Java classes `org.vaulttec.sonarqube.auth.oidc` which is abbreviated as `o.v.s.a.o`:
+In the Web Server log file the plugin's log entries can be identified by the package name of it's Java classes `com.ethosengine.sonarqube.auth.oidc` which is abbreviated as `c.e.s.a.o`:
 ![SonarQube Web Server Log Sample](docs/images/sonarqube-web-server-log-sample.png)
 
 ## Tested with
@@ -78,3 +89,10 @@ In the Web Server log file the plugin's log entries can be identified by the pac
 * Keycloak 4.8.1.Final, 12.0.4, 16.1.0, 22.0.1
 * JetBrains Hub 2017.4
 * Okta 2018.25
+
+
+### Support Support [Matthew Dowell's](https://github.com/mbd06b)'s Work
+
+If you find this helpful and would like to support my work, you can buy me a coffee! Your support helps me maintain projects.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/mbd06b) [!["Buy Me A Crypto Coffee"](https://img.shields.io/badge/Buy%20me%20a-Crypto%20Coffee-blue.svg?style=for-the-badge&logo=ethereum)](https://commerce.coinbase.com/checkout/81641625-3924-4635-93e8-4d01caae73fd)

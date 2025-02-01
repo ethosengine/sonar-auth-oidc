@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaulttec.sonarqube.auth.oidc;
+package com.ethosengine.sonarqube.auth.oidc;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -26,6 +26,8 @@ import org.sonar.api.SonarRuntime;
 import org.sonar.api.internal.PluginContextImpl;
 import org.sonar.api.internal.SonarRuntimeImpl;
 import org.sonar.api.utils.Version;
+
+import com.ethosengine.sonarqube.auth.oidc.AuthOidcPlugin;
 
 public class AuthOidcPluginTest {
 
