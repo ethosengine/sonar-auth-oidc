@@ -42,19 +42,8 @@ spec:
             steps {
              	container('maven-jdk8'){
         	       script {
-                        checkout([
-                            $class: 'GitSCM', 
-                            branches: [
-                                [name: 'main']
-                            ], 
-                            doGenerateSubmoduleConfigurations: false, 
-                            extensions: [], 
-                            submoduleCfg: [], 
-                            userRemoteConfigs: [[
-                              //  credentialsId: 'Ethosengine_Jenkins_SSH', 
-                                url: 'https://github.com/ethosengine/sonar-auth-oidc.git'
-                            ]]
-                        ])
+                        checkout scm
+              
                         withMaven() {
                             sh 'mvn clean compile -fae'
                         }
