@@ -1,5 +1,5 @@
 # OpenID Connect (OIDC) Plugin for SonarQube
-[![Build Status](https://github.com/vaulttec/sonar-auth-oidc/actions/workflows/build.yml/badge.svg)](https://github.com/vaulttec/sonar-auth-oidc/actions/workflows/build.yml) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=org.vaulttec.sonarqube.auth.oidc%3Asonar-auth-oidc-plugin&metric=alert_status)](https://sonarcloud.io/dashboard?id=org.vaulttec.sonarqube.auth.oidc%3Asonar-auth-oidc-plugin) [![Release](https://img.shields.io/github/release/vaulttec/sonar-auth-oidc.svg)](https://github.com/vaulttec/sonar-auth-oidc/releases/latest) [![Marketplace](https://img.shields.io/badge/Marketplace-authoidc-orange?logo=SonarQube)](https://www.sonarplugins.com/authoidc)
+[![Build Status](https://github.com/vaulttec/sonar-auth-oidc/actions/workflows/build.yml/badge.svg)](https://github.com/vaulttec/sonar-auth-oidc/actions/workflows/build.yml) [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=com.ethosengine.sonarqube.auth.oidc%3Asonar-auth-oidc-plugin&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.ethosengine.sonarqube.auth.oidc%3Asonar-auth-oidc-plugin) [![Release](https://img.shields.io/github/release/vaulttec/sonar-auth-oidc.svg)](https://github.com/vaulttec/sonar-auth-oidc/releases/latest) [![Marketplace](https://img.shields.io/badge/Marketplace-authoidc-orange?logo=SonarQube)](https://www.sonarplugins.com/authoidc)
 
 
 > **Fork Status Notice**  
@@ -80,7 +80,7 @@ If a [network proxy](https://docs.oracle.com/javase/8/docs/api/java/net/doc-file
 To troubleshoot issues with this plugin activate [SonarQube's debug logging](https://docs.sonarqube.org/latest/instance-administration/system-info/) (Administration > System > Logs level) and download the Web Server log:
 ![SonarQube System Logs](docs/images/sonarqube-system-logs.png)
 
-In the Web Server log file the plugin's log entries can be identified by the package name of it's Java classes `org.vaulttec.sonarqube.auth.oidc` which is abbreviated as `o.v.s.a.o`:
+In the Web Server log file the plugin's log entries can be identified by the package name of it's Java classes `com.ethosengine.sonarqube.auth.oidc` which is abbreviated as `c.e.s.a.o`:
 ![SonarQube Web Server Log Sample](docs/images/sonarqube-web-server-log-sample.png)
 
 ## Tested with

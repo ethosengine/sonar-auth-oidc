@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaulttec.sonarqube.auth.oidc;
+package com.ethosengine.sonarqube.auth.oidc;
 
 import static java.lang.String.format;
 import static java.net.URLEncoder.encode;
@@ -33,6 +33,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.ethosengine.sonarqube.auth.oidc.OidcClient;
+import com.ethosengine.sonarqube.auth.oidc.OidcIdentityProvider;
+import com.ethosengine.sonarqube.auth.oidc.UserIdentityFactory;
 import com.nimbusds.common.contenttype.ContentType;
 
 import org.junit.Before;

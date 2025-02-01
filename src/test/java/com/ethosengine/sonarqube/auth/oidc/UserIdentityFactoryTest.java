@@ -15,8 +15,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaulttec.sonarqube.auth.oidc;
+package com.ethosengine.sonarqube.auth.oidc;
 
+import com.ethosengine.sonarqube.auth.oidc.OidcConfiguration;
+import com.ethosengine.sonarqube.auth.oidc.UserIdentityFactory;
 import com.nimbusds.oauth2.sdk.ParseException;
 import com.nimbusds.openid.connect.sdk.claims.UserInfo;
 import org.junit.Test;

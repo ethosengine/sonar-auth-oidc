@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaulttec.sonarqube.auth.oidc;
+package com.ethosengine.sonarqube.auth.oidc;
 
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
@@ -35,6 +35,10 @@ import org.junit.Test;
 import org.sonar.api.CoreProperties;
 import org.sonar.api.config.Configuration;
 import org.sonar.api.web.ServletFilter;
+
+import com.ethosengine.sonarqube.auth.oidc.AutoLoginFilter;
+import com.ethosengine.sonarqube.auth.oidc.OidcConfiguration;
+import com.ethosengine.sonarqube.auth.oidc.OidcIdentityProvider;
 
 public class AutoLoginFilterTest {
 

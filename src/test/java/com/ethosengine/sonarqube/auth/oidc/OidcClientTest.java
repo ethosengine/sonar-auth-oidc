@@ -15,7 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.vaulttec.sonarqube.auth.oidc;
+package com.ethosengine.sonarqube.auth.oidc;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.assertj.core.api.Assertions.failBecauseExceptionWasNotThrown;
@@ -31,6 +31,7 @@ import java.util.Collections;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.ethosengine.sonarqube.auth.oidc.OidcClient;
 import com.nimbusds.jose.util.JSONObjectUtils;
 import com.nimbusds.oauth2.sdk.AuthorizationCode;
 import com.nimbusds.oauth2.sdk.ErrorObject;
