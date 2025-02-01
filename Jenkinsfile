@@ -81,7 +81,7 @@ spec:
                 container('maven-jdk21'){
                     script {
                         withSonarQubeEnv('ee-sonarqube') {
-                           sh 'mvn clean verify sonar:sonar -Dmaven.test.failure.ignore=true -Dsonar.branch.name=${BRANCH_NAME}'
+                           sh 'mvn clean verify sonar:sonar -Dmaven.test.failure.ignore=true'
                         }
                     }
                 }
