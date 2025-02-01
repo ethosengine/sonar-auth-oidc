@@ -30,9 +30,15 @@ spec:
     configMap:
       # Provide the name of the ConfigMap containing the files you want
       # to add to the container
-      name: ghmbd06b-maven-settings
+      name: github-ee-bot-maven-settings
     '''
         }
+    }
+    
+    parameters {
+        booleanParam(name: 'IS_RELEASE', defaultValue: false, description: 'Check to perform a release')
+        string(name: 'RELEASE_VERSION', defaultValue: '', description: 'Release version (e.g., 2.1.3.RELEASE)')
+        string(name: 'NEXT_VERSION', defaultValue: '', description: 'Next development version (e.g., 2.1.4-SNAPSHOT)')
     }
     
     stages {
@@ -87,6 +93,25 @@ spec:
                 }
             }
         }
+     
+        stage('Release') {
+            when {
+                expression { return params.IS_RELEASE }
+            }
+            steps {
+                container('maven-jdk21') {
+                        sh """
+                            
+                            mvn -B release:prepare release:perform \
+                                -DreleaseVersion=${params.RELEASE_VERSION} \
+                                -DdevelopmentVersion=${params.NEXT_VERSION} \
+                                -Darguments="-DskipTests" \
+                                -DscmCommentPrefix="[maven-release-plugin][skip ci] "
+                        """
+                }
+            }
+        }
+        
     }
     
     post {
