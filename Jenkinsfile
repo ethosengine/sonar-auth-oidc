@@ -102,7 +102,9 @@ spec:
                 container('maven-jdk21') {
                         sh """
     git config --global --add safe.directory \${WORKSPACE}
-                            
+
+       git config --global user.email "mbd06b+ethosenginebot@gmail.com"
+                    git config --global user.name "EthosengineBot"                     
                             mvn -B release:prepare release:perform \
                                 -DreleaseVersion=${params.RELEASE_VERSION} \
                                 -DdevelopmentVersion=${params.NEXT_VERSION} \
