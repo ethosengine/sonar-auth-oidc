@@ -101,6 +101,7 @@ spec:
             steps {
                 container('maven-jdk21') {
                         sh """
+    git config --global --add safe.directory \${WORKSPACE}
                             
                             mvn -B release:prepare release:perform \
                                 -DreleaseVersion=${params.RELEASE_VERSION} \
