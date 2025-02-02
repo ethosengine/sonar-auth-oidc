@@ -18,7 +18,7 @@ spec:
     - name: maven-settings-volume
       mountPath: /usr/share/maven/ref/settings.xml
   - name: maven-jdk21
-    image: maven:3.9.9-eclipse-temurin-21-debian
+    image: maven:3.9.9-eclipse-temurin-21
     command:
     - cat
     tty: true
