@@ -48,7 +48,7 @@
 
 	<scm>
 		<connection>scm:git:https://github.com/ethosengine/sonar-auth-oidc.git</connection>
-		<developerConnection>scm:git:git@github.com:ethosengine/sonar-auth-oidc.git</developerConnection>
+   		<developerConnection>scm:git:https://github.com/ethosengine/sonar-auth-oidc.git</developerConnection>
 		<url>https://github.com/ethosengine/sonar-auth-oidc</url>
 		<tag>HEAD</tag>
 	</scm>
@@ -120,6 +120,9 @@
 	            <version>3.0.0-M6</version>
 	            <configuration>
 	                <tagNameFormat>v@{project.version}</tagNameFormat>
+			<pushChanges>true</pushChanges>
+		        <useReleaseProfile>false</useReleaseProfile>
+		        <scmCommentPrefix>[maven-release-plugin][skip ci] </scmCommentPrefix>
 	            </configuration>
             </plugin>
 			<plugin>
