@@ -100,7 +100,7 @@ spec:
             }
             steps {
                 container('maven-jdk21') {
-					withMaven(mavenSettingsConfig: 'github-ee-bot-maven-settings')){
+					withMaven(mavenSettingsConfig: 'github-ee-bot-maven-settings'){
                         sh """
                         
     						git config --global --add safe.directory \${WORKSPACE}
