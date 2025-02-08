@@ -94,26 +94,30 @@ spec:
             }
         }
      
-        stage('Release') {
+       stage('Release') {
             when {
                 expression { return params.IS_RELEASE }
             }
             steps {
                 container('maven-jdk21') {
+					withMaven(){
                         sh """
-    git config --global --add safe.directory \${WORKSPACE}
-
-       git config --global user.email "mbd06b+ethosenginebot@gmail.com"
-                    git config --global user.name "EthosengineBot"
-
-             git checkout ${BRANCH_NAME}
-                    git pull        
+                        
+    						git config --global --add safe.directory \${WORKSPACE}
+      					    git config --global user.email "mbd06b+ethosenginebot@gmail.com"
+                  			git config --global user.name "EthosengineBot"
+			             	git checkout ${BRANCH_NAME}
+			                git pull
+			                        
                             mvn -B release:prepare release:perform \
                                 -DreleaseVersion=${params.RELEASE_VERSION} \
                                 -DdevelopmentVersion=${params.NEXT_VERSION} \
                                 -Darguments="-DskipTests" \
-                                -DscmCommentPrefix="[maven-release-plugin][skip ci] "
+                                -DscmCommentPrefix="[maven-release-plugin][skip ci] " \
+
                         """
+                  
+                  }
                 }
             }
         }
