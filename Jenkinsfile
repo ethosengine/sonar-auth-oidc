@@ -37,7 +37,7 @@ spec:
     
     parameters {
         booleanParam(name: 'IS_RELEASE', defaultValue: false, description: 'Check to perform a release')
-        string(name: 'RELEASE_VERSION', defaultValue: '', description: 'Release version (e.g., 2.1.3.RELEASE)')
+        string(name: 'RELEASE_VERSION', defaultValue: '', description: 'Release version (e.g., 2.1.3)')
         string(name: 'NEXT_VERSION', defaultValue: '', description: 'Next development version (e.g., 2.1.4-SNAPSHOT)')
     }
     
@@ -100,7 +100,7 @@ spec:
             }
             steps {
                 container('maven-jdk21') {
-					withMaven(){
+					withMaven(mavenSettingsConfig: 'github-ee-bot-maven-settings')){
                         sh """
                         
     						git config --global --add safe.directory \${WORKSPACE}
@@ -117,7 +117,15 @@ spec:
 
                         """
                   
-                  }
+                 	 }
+                }
+            }
+            post {
+                failure {
+                    script {
+                        echo "Release stage failed; rolling back changes."
+                        sh "mvn release:rollback"
+                    }
                 }
             }
         }
