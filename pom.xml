@@ -53,6 +53,17 @@
 		<tag>v2.1.3</tag>
 	</scm>
 
+	<distributionManagement>
+	  <repository>
+	    <id>github</id>
+	    <url>https://maven.pkg.github.com/ethosengine/sonar-auth-oidc</url>
+	  </repository>
+	  <snapshotRepository>
+	    <id>github</id>
+	    <url>https://maven.pkg.github.com/ethosengine/sonar-auth-oidc</url>
+	  </snapshotRepository>
+	</distributionManagement>
+
 	<developers>
 		<developer>
 			<id>mbd06b</id>
